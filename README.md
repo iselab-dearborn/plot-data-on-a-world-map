@@ -9,6 +9,10 @@ Generating schematic and interactive maps from your data
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
+## Usage
+
+Access the tool <a href="https://iselab-dearborn.github.io/plot-data-on-a-world-map/">here</a>
+
 ## Screenshot
 
 <img src="https://thiagodnf.github.io/plot-data-on-a-world-map/images/screenshot.png"/>
