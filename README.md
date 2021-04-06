@@ -1,3 +1,5 @@
+<img src="https://thiagodnf.github.io/plot-data-on-a-world-map/images/favicons/favicon-32x32.png.png"/>
+
 # Plot Data on a World Map
 
 Generating schematic and interactive maps from your data
