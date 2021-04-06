@@ -11,7 +11,7 @@ function plotWorld(data, settings){
     Highcharts.mapChart('container-map-world', {
         chart: {
             map: 'custom/world',
-            borderWidth: settings.showBorder? 1 : 0,
+            borderWidth: settings.showChartBorder? 1 : 0,
             borderColor: "lightgray"
         },
         title: {
@@ -54,8 +54,13 @@ function plotWorld(data, settings){
             max: maxColorAxis,
             type: settings.showLogarithmicScale ? 'logarithmic' : null,
             minColor: '#EEEEFF',
-            maxColor: '#000022',
+            maxColor: settings.seriesColor || '#000022',
         } : null,
+        plotOptions: {
+            series:{
+                color: settings.seriesColor || "#7cb5ec"
+            }
+        },
         series: [{
             name: settings.axisTitle || "Data",
             joinBy: ['iso-a3', 'code3'],

@@ -88,10 +88,11 @@ function plot(countries){
         showLegend: $('#show-legend').prop('checked'),
         showMapNavigation: $('#show-map-navigation').prop('checked'),
         showWatermark: $('#show-watermark').prop('checked'),
-        showBorder: $('#show-border').prop('checked'),
+        showChartBorder: $('#show-chart-border').prop('checked'),
         showDataLabels: $('#show-data-labels').prop('checked'),
         showLogarithmicScale: $('#show-logarithmic-scale').prop('checked'),
-        showColorAxis: $('#show-color-axis').prop('checked')
+        showColorAxis: $('#show-color-axis').prop('checked'),
+        seriesColor: $('#series-color').val()
     }
 
     data = parse(data);

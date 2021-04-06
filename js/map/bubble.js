@@ -3,7 +3,7 @@ function plotBubble(data, settings){
     Highcharts.mapChart('container-map-bubble', {
         chart: {
             map: 'custom/world',
-            borderWidth: settings.showBorder? 1 : 0,
+            borderWidth: settings.showChartBorder? 1 : 0,
             borderColor: "lightgray"
         },
         title: {
@@ -21,6 +21,11 @@ function plotBubble(data, settings){
         },
         credits: {
             enabled: settings.showWatermark || false,
+        },
+        plotOptions: {
+            series:{
+                color: settings.seriesColor || "#7cb5ec"
+            }
         },
         series: [{
             name: 'Countries',
