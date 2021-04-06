@@ -9,6 +9,12 @@ function plotBubble(data){
         title: {
             text: null
         },
+
+        exporting: {
+            sourceWidth: 1200,
+            sourceHeight: 500
+        },
+
         mapNavigation: {
             enabled: true
         },
