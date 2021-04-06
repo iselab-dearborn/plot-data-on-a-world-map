@@ -97,7 +97,7 @@ function plot(countries){
 
     data = loadCodes(countries, data);
 
-    plotGeneral(data, settings);
+    plotWorld(data, settings);
     plotBubble(data, settings);
 }
 

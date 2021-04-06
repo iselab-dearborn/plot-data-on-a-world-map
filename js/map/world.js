@@ -1,4 +1,4 @@
-function plotGeneral(data, settings){
+function plotWorld(data, settings){
 
     let minColorAxis = Number.MAX_SAFE_INTEGER;
     let maxColorAxis = Number.MIN_SAFE_INTEGER;
@@ -8,7 +8,7 @@ function plotGeneral(data, settings){
         maxColorAxis = Math.max(el.value, maxColorAxis);
     });
 
-    Highcharts.mapChart('container-map-general', {
+    Highcharts.mapChart('container-map-world', {
         chart: {
             map: 'custom/world',
             borderWidth: settings.showBorder? 1 : 0,
