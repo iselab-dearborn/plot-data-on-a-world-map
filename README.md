@@ -1,6 +1,5 @@
-# Wumpus World Simulator
+# plot-data-on-a-world-map
 
-A Wumpus World Simulator developed in Javascript, HTML and CSS
 
 [![GitHub Release](https://img.shields.io/github/release/thiagodnf/wumpus-world-simulator.svg)](https://github.com/thiagodnf/wumpus-world-simulator/releases/latest)
 [![GitHub contributors](https://img.shields.io/github/contributors/thiagodnf/wumpus-world-simulator.svg)](https://github.com/thiagodnf/wumpus-world-simulator/graphs/contributors)
@@ -10,22 +9,6 @@ A Wumpus World Simulator developed in Javascript, HTML and CSS
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 
-## Wumpus?
-Hunt the Wumpus is an early computer game, based on a simple hide and seek format featuring a mysterious monster (the Wumpus) that lurks deep inside a network of rooms. It was originally a text-based game written in BASIC. It has since been ported to various programming languages and platforms including graphical versions.
-
-Reference: [Wikipedia](https://en.wikipedia.org/wiki/Hunt_the_Wumpus)
-
-## How to play
-Access the simulator [here](http://thiagodnf.github.io/wumpus-world-simulator/).
-
-## Screenshot
-
-![alt tag](https://raw.githubusercontent.com/thiagodnf/wumpus-world-simulator/master/img/screenshot.png)
-
-## Languages
-The Wumpus World Simulator is available at following languages:
-* en-US
-* pt-BR
 
 ## Questions or Suggestions
 
