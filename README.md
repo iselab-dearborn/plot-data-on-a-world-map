@@ -1,5 +1,6 @@
-# plot-data-on-a-world-map
+# Plot Data on a World Map
 
+Generating schematic and interactive maps from your data
 
 [![GitHub Release](https://img.shields.io/github/release/thiagodnf/wumpus-world-simulator.svg)](https://github.com/thiagodnf/wumpus-world-simulator/releases/latest)
 [![GitHub contributors](https://img.shields.io/github/contributors/thiagodnf/wumpus-world-simulator.svg)](https://github.com/thiagodnf/wumpus-world-simulator/graphs/contributors)
@@ -8,6 +9,7 @@
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
+## Screenshot
 
 
 ## Questions or Suggestions
