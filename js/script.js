@@ -114,7 +114,7 @@ function loadExample(countries){
 function loadCountries(countries){
 
     const $table = $("#table-countries").find('tbody');
-console.log(countries)
+
     for(const name in countries){
 
         $table.append([
