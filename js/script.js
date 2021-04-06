@@ -105,7 +105,9 @@ function plot(countries){
         showDataLabels: $('#show-data-labels').prop('checked'),
         showLogarithmicScale: $('#show-logarithmic-scale').prop('checked'),
         showColorAxis: $('#show-color-axis').prop('checked'),
-        seriesColor: $('#series-color').val()
+        seriesColor: $('#series-color').val(),
+        exportingSourceWidth: $('#exporting-source-width').val(),
+        exportingSourceHeight: $('#exporting-source-height').val()
     }
 
     data = parse(data);

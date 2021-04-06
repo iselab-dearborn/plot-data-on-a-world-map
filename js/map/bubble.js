@@ -13,8 +13,8 @@ function plotBubble(data, settings){
             text: settings.chartSubtitle || null
         },
         exporting: {
-            sourceWidth: 1200,
-            sourceHeight: 500
+            sourceWidth: settings.exportingSourceWidth || 1200,
+            sourceHeight: settings.exportingSourceHeight || 500
         },
         mapNavigation: {
             enabled: settings.showMapNavigation || false,
