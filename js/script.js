@@ -111,6 +111,22 @@ function loadExample(countries){
     });
 }
 
+function loadCountries(countries){
+
+    const $table = $("#table-countries").find('tbody');
+console.log(countries)
+    for(const name in countries){
+
+        $table.append([
+            '<tr>',
+                `<td>${name}</td>`,
+                `<td>${countries[name].countryCode}</td>`,
+                `<td>${countries[name].isoCodes}</td>`,
+            '</tr>'
+            ].join(''));
+    };
+}
+
 $(function(){
 
     const documentHeight = $(document).height();
@@ -120,6 +136,7 @@ $(function(){
 
     readCountries().then((countries) => {
 
+        loadCountries(countries);
         loadExample(countries);
 
         $("#btn-plot").click(() => {

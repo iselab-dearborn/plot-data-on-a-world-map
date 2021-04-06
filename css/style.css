@@ -12,6 +12,7 @@ main a{
 
 .nav-pills .nav-link.active{
     color: white !important;
+    background-color: #3f8abf !important;
 }
 
 .btn-primary{
