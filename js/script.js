@@ -48,6 +48,7 @@ function parse(data){
         entries.push({
             name: columns[0].toLowerCase(),
             z: parseInt(columns[1]),
+            value: parseInt(columns[1]),
             code3: "",
             code: "",
         });
@@ -63,10 +64,10 @@ function loadCodes(countries, data){
         let key = el.name.toLowerCase();
         let country = countries[key];
 
-        if(country){
+        if (country) {
             el.code = country.isoCodes[0];
             el.code3 = country.isoCodes[1];
-        }else{
+        } else {
             console.log("Not Found", el)
         }
     });
@@ -76,19 +77,34 @@ function loadCodes(countries, data){
 
 function plot(countries){
 
-    let data = $("#data").val();
+    let data = $("#input-data").val();
+
+    let settings = {
+        chartTitle: $('#chart-title').val(),
+        chartSubtitle: $('#chart-subtitle').val(),
+        axisTitle: $('#axis-title').val(),
+        minSize: $('#min-size').val(),
+        maxSize: $('#max-size').val(),
+        showLegend: $('#show-legend').prop('checked'),
+        showMapNavigation: $('#show-map-navigation').prop('checked'),
+        showWatermark: $('#show-watermark').prop('checked'),
+        showBorder: $('#show-border').prop('checked'),
+        showDataLabels: $('#show-data-labels').prop('checked'),
+        showLogarithmicScale: $('#show-logarithmic-scale').prop('checked')
+    }
 
     data = parse(data);
 
     data = loadCodes(countries, data);
 
-    plotBubble(data);
+    plotGeneral(data, settings);
+    plotBubble(data, settings);
 }
 
 function loadExample(countries){
 
     $.get("data/example.csv", function (response) {
-        $("#data").val(response);
+        $("#input-data").val(response);
         plot(countries);
     });
 }
@@ -99,24 +115,8 @@ $(function(){
 
         loadExample(countries);
 
-        $("#btn-plot").click((event) => {
-            event.preventDefault();
+        $("#btn-plot").click(() => {
             plot(countries);
         });
     });
-
-    //let countries =  readCountries();
-
-    // console.log(countries)
-
-    //
-
-    //     getData().then((data) => {
-
-    //         data = updateData(countries, data);
-
-    //         plot(data);
-    //     });
-    // });
-
 })

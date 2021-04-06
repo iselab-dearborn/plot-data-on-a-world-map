@@ -1,38 +1,40 @@
-function plotBubble(data){
+function plotBubble(data, settings){
 
-    Highcharts.mapChart('container', {
-
+    Highcharts.mapChart('container-map-bubble', {
         chart: {
-            map: 'custom/world'
+            map: 'custom/world',
+            borderWidth: settings.showBorder? 1 : 0,
+            borderColor: "lightgray"
         },
-
         title: {
-            text: null
+            text: settings.chartTitle || null
         },
-
+        subtitle: {
+            text: settings.chartSubtitle || null
+        },
         exporting: {
             sourceWidth: 1200,
             sourceHeight: 500
         },
-
         mapNavigation: {
-            enabled: true
+            enabled: settings.showMapNavigation || false,
         },
-        tooltip: {
-            headerFormat: '',
-            pointFormat: '<b>{point.name}</b><br>Lat: {point.lat:.2f}, Lon: {point.lon:.2f}'
+        credits: {
+            enabled: settings.showWatermark || false,
         },
         series: [{
             name: 'Countries',
             color: '#E0E0E0',
+            showInLegend: false,
             enableMouseTracking: false
         }, {
             type: 'mapbubble',
-            name: 'Population 2016',
+            name: settings.axisTitle || "Data",
             joinBy: ['iso-a3', 'code3'],
             data: data,
-            minSize: 4,
-            maxSize: '12%',
+            minSize: settings.minSize || 10,
+            maxSize: settings.maxSize || 100,
+            showInLegend: settings.showLegend,
             dataLabels: {
                 enabled: true,
                 color: '#FFFFFF',
