@@ -1,8 +1,8 @@
-function readCountries(){
+async function readCountries(){
 
     return new Promise((resolve, reject) => {
 
-        $.get("country.csv", function (response) {
+        $.get("data/country.csv", function (response) {
 
             const rows = response.split("\n");
 
@@ -29,40 +29,34 @@ function readCountries(){
     });
 }
 
-function getData(){
+function parse(data){
 
-    return new Promise((resolve, reject) => {
+    const rows = data.split("\n");
 
-        var data = $("#data").val();
+    const entries = [];
 
-        const rows = data.split("\n");
+    rows.forEach((el, i) => {
 
-        const output = [];
+        el = $.trim(el);
 
-        rows.forEach((el, i) => {
+        if (el.length == 0) {
+            return;
+        }
 
-            el = $.trim(el);
+        let columns = el.split(";");
 
-            if (el.length == 0) {
-                return;
-            }
-
-            let columns = el.split(";");
-
-            output.push({
-                id: columns[0],
-                name: columns[1],
-                z: parseInt(columns[2]),
-                code3: "",
-                code: "",
-            });
+        entries.push({
+            name: columns[0].toLowerCase(),
+            z: parseInt(columns[1]),
+            code3: "",
+            code: "",
         });
-
-        resolve(output);
     });
+
+    return entries;
 }
 
-function updateData(countries, data){
+function loadCodes(countries, data){
 
     data.forEach((el, i) => {
 
@@ -80,57 +74,22 @@ function updateData(countries, data){
     return data;
 }
 
-function plot(data){
+function plot(countries){
 
-    Highcharts.mapChart('container', {
+    let data = $("#data").val();
 
-        chart: {
-            map: 'custom/world'
-        },
+    data = parse(data);
 
-        title: {
-            text: null
-        },
+    data = loadCodes(countries, data);
 
-        exporting: {
-            sourceWidth: 600,
-            sourceHeight: 500
-        },
+    plotBubble(data);
+}
 
-        mapNavigation: {
-            enabled: true,
-            enableButtons: false,
-            buttonOptions: {
-                verticalAlign: 'top'
-            }
-        },
-        mapNavigation: {
-            enabled: true
-        },
-        tooltip: {
-            headerFormat: '',
-            pointFormat: '<b>{point.name}</b><br>Lat: {point.lat:.2f}, Lon: {point.lon:.2f}'
-        },
-        series: [{
-            name: 'Countries',
-            color: '#E0E0E0',
-            enableMouseTracking: false
-        }, {
-            type: 'mapbubble',
-            name: 'Population 2016',
-            joinBy: ['iso-a3', 'code3'],
-            data: data,
-            minSize: 4,
-            maxSize: '12%',
-            dataLabels: {
-                enabled: true,
-                color: '#FFFFFF',
-                format: '{point.z}'
-            },
-            tooltip: {
-                pointFormat: '{point.code}: {point.value}/km²'
-            }
-        }]
+function loadExample(countries){
+
+    $.get("data/example.csv", function (response) {
+        $("#data").val(response);
+        plot(countries);
     });
 }
 
@@ -138,12 +97,26 @@ $(function(){
 
     readCountries().then((countries) => {
 
-        getData().then((data) => {
+        loadExample(countries);
 
-            data = updateData(countries, data);
-
-            plot(data);
+        $("#btn-plot").click((event) => {
+            event.preventDefault();
+            plot(countries);
         });
     });
+
+    //let countries =  readCountries();
+
+    // console.log(countries)
+
+    //
+
+    //     getData().then((data) => {
+
+    //         data = updateData(countries, data);
+
+    //         plot(data);
+    //     });
+    // });
 
 })

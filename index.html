@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<title>Plot World Map</title>
+		<title>Plot Data on a World Map</title>
 
 		<meta name="author" content="Thiago Ferreira">
-		<meta name="description" content="Plot World Map">
-		<meta name="keywords" content="Plot World Map">
+		<meta name="description" content="Plot Data on a World Map">
+		<meta name="keywords" content="data, world map">
 		<meta name="robots" content="index, follow">
 		<meta name="theme-color" content="rgba(72, 120, 160, 1)">
 		<meta name="mobile-web-app-capable" content="yes">
@@ -25,7 +25,7 @@
     </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-		<a class="navbar-brand" href="#">Plot World Map</a>
+		<a class="navbar-brand" href="#">Plot Data on a World Map</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -35,53 +35,14 @@
     </nav>
 
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-3">
-                <form>
-                    <div class="form-group">
-                        <label for="data">Example textarea</label>
-                        <textarea class="form-control" id="data" rows="15">
-1;United States;33
-2;Germany;14
-3;China;8
-4;Canada;7
-5;Spain;7
-6;Austria;7
-7;Italy;7
-8;United Kingdom;4
-9;Netherlands;3
-10;Russia;3
-11;Sweden;3
-12;Georgia;2
-13;Romania;2
-14;Czech Republic;2
-15;India;2
-16;Japan;2
-17;France;2
-18;Belgium;2
-19;Lebanon;1
-20;Colombia;1
-21;Estonia;1
-22;Greece;1
-23;Portugal;1
-24;Poland;1
-25;Hungary;1
-26;Denmark;1
-27;Luxembourg;1
-28;Iran;1
-29;Ireland;1
-30;Australia;1
-31;Norway;1
-32;Taiwan;1
-
-                        </textarea>
-                    </div>
-                </form>
+        <form>
+            <div class="form-group">
+                <label for="data">Data</label>
+                <textarea id="data" class="form-control" rows="10"></textarea>
             </div>
-            <div class="col-9">
-                <div id="container" style="height: 500px; max-width: 100%; margin: 0 auto"></div>
-            </div>
-        </div>
+            <button id="btn-plot" class="btn btn-success" type="button" >Plot</button>
+        </form>
+        <div id="container" style="height: 500px; max-width: 100%; margin: 0 auto"></div>
     </div>
 
     <!-- Vendor -->
@@ -96,16 +57,8 @@
     <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
     <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.messagestore.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.fallbacks.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.language.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.parser.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.emitter.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.emitter.bidi.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js"></script>
-
     <!-- Application -->
+    <script src="js/map/bubble.js"></script>
     <script src="js/script.js"></script>
 
   </body>
