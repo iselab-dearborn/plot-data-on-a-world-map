@@ -1,4 +1,4 @@
-<img src="https://thiagodnf.github.io/plot-data-on-a-world-map/images/favicons/apple-touch-icon.png" width="70px"/>
+<img src="https://thiagodnf.github.io/plot-data-on-a-world-map/images/favicons/apple-touch-icon.png" width="60px"/>
 
 # Plot Data on a World Map
 
