@@ -24,7 +24,7 @@
         <link rel="stylesheet" href="css/style.css"/>
     </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
 		<a class="navbar-brand" href="#">Plot Data on a World Map</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
 			<span class="navbar-toggler-icon"></span>
@@ -33,145 +33,147 @@
 
 		</div><!--/.nav-collapse -->
     </nav>
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-3">
-                <form>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <form>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="data-tab" data-toggle="tab" href="#data" role="tab">Data</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab">Settings</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="data" role="tabpanel">
+                                <div class="form-group mt-3">
+                                    <textarea id="input-data" class="form-control" rows="15"></textarea>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade mt-3 pb-3" id="settings" role="tabpanel">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="nav flex-column nav-pills" role="tablist">
+                                            <a class="nav-link active" id="v-pills-titles-tab" data-toggle="pill" href="#v-pills-titles" role="tab">Titles</a>
+                                            <a class="nav-link" id="v-pills-legend-tab" data-toggle="pill" href="#v-pills-legend" role="tab">Legend</a>
+                                            <a class="nav-link" id="v-pills-appearance-tab" data-toggle="pill" href="#v-pills-appearance" role="tab">Appearance</a>
+                                            <a class="nav-link" id="v-pills-data-labels-tab" data-toggle="pill" href="#v-pills-data-labels" role="tab">Data Labels</a>
+                                            <a class="nav-link" id="v-pills-credits-tab" data-toggle="pill" href="#v-pills-credits" role="tab">Credits</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="tab-content" id="v-pills-tabContent">
+                                            <div class="tab-pane fade show active" id="v-pills-titles" role="tabpanel">
+                                                <div class="form-group">
+                                                    <label for="chart-title">Chart Title</label>
+                                                    <input type="text" class="form-control" id="chart-title">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="chart-subtitle">Chart Subtitle</label>
+                                                    <input type="text" class="form-control" id="chart-subtitle">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="axis-title">Axis Title</label>
+                                                    <input type="text" class="form-control" id="axis-title">
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-legend" role="tabpanel">
+                                                <div class="form-group form-check">
+                                                    <input type="checkbox" class="form-check-input" id="show-legend">
+                                                    <label class="form-check-label" for="show-legend">Show Legend</label>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-appearance" role="tabpanel">
+                                                <div class="form-group">
+                                                    <label for="series-color">Series Color</label>
+                                                    <select id="series-color" class="selectpicker form-control">
+                                                        <option style="background: #7cb5ec; color: #fff;" value="#7cb5ec" selected>Blue</option>
+                                                        <option style="background: #434348; color: #fff;" value="#434348">Black</option>
+                                                        <option style="background: #90ed7d; color: #fff;" value="#90ed7d">Light Green</option>
+                                                        <option style="background: #f7a35c; color: #fff;" value="#f7a35c">Orange</option>
+                                                        <option style="background: #8085e9; color: #fff;" value="#8085e9">Purple</option>
+                                                        <option style="background: #f15c80; color: #fff;" value="#f15c80">Pink</option>
+                                                        <option style="background: #e4d354; color: #fff;" value="#e4d354">Yellow</option>
+                                                        <option style="background: #2b908f; color: #fff;" value="#2b908f">Green</option>
+                                                        <option style="background: #f45b5b; color: #fff;" value="#f45b5b">Red</option>
+                                                        <option style="background: #91e8e1; color: #fff;" value="#91e8e1">Light Blue</option>
+                                                        <option style="background: #000022; color: #fff;" value="#000022">Dark Blue</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group form-check">
+                                                    <input type="checkbox" class="form-check-input" id="show-map-navigation" checked="checked">
+                                                    <label class="form-check-label" for="show-map-navigation">Show Map Navigation</label>
+                                                </div>
+                                                <div class="form-group form-check">
+                                                    <input type="checkbox" class="form-check-input" id="show-chart-border" checked="checked">
+                                                    <label class="form-check-label" for="show-chart-border">Show Chart Border</label>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-data-labels" role="tabpanel">
+                                                <p class="font-weight-bold">General</p>
+                                                <div class="form-group form-check">
+                                                    <input type="checkbox" class="form-check-input" id="show-data-labels" checked="checked">
+                                                    <label class="form-check-label" for="show-data-labels">Show Data Labels</label>
+                                                </div>
+                                                <p class="font-weight-bold">For World Map</p>
+                                                <div class="form-group form-check">
+                                                    <input type="checkbox" class="form-check-input" id="show-logarithmic-scale">
+                                                    <label class="form-check-label" for="show-logarithmic-scale">Show Logarithmic Scale</label>
+                                                </div>
+                                                <div class="form-group form-check">
+                                                    <input type="checkbox" class="form-check-input" id="show-color-axis" checked="checked">
+                                                    <label class="form-check-label" for="show-color-axis">Show Color Axis</label>
+                                                </div>
+                                                <p class="font-weight-bold">For Bubble Map</p>
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <label for="min-size">Min Size</label>
+                                                        <input type="number" class="form-control" id="min-size" min="0" step="1"value="10">
+                                                    </div>
+                                                    <div class="col">
+                                                        <label for="max-size">Max Size</label>
+                                                        <input type="number" class="form-control" id="max-size" min="0" step="1" value="50">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-credits" role="tabpanel">
+                                                <div class="form-group form-check">
+                                                    <input type="checkbox" class="form-check-input" id="show-watermark">
+                                                    <label class="form-check-label" for="show-watermark">Show Watermark</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                        <button id="btn-plot" class="btn btn-primary mb-3" type="button">Plot</button>
+                    </form>
+                </div>
+                <div class="col-lg-9">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link active" id="data-tab" data-toggle="tab" href="#data" role="tab">Data</a>
+                            <a class="nav-link active" id="map-general-tab" data-toggle="tab" href="#world-map" role="tab">World Map</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab">Settings</a>
+                            <a class="nav-link" id="map-bubble-tab" data-toggle="tab" href="#bubble-map" role="tab">Bubble Map</a>
                         </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="data" role="tabpanel">
-                            <div class="form-group mt-3">
-                                <textarea id="input-data" class="form-control" rows="15"></textarea>
-                            </div>
+                        <div class="tab-pane fade show active" id="world-map" role="tabpanel">
+                            <div id="container-map-world" class="map-container mt-3"></div>
                         </div>
-                        <div class="tab-pane fade mt-3 pb-3" id="settings" role="tabpanel">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="nav flex-column nav-pills" role="tablist">
-                                        <a class="nav-link active" id="v-pills-titles-tab" data-toggle="pill" href="#v-pills-titles" role="tab">Titles</a>
-                                        <a class="nav-link" id="v-pills-legend-tab" data-toggle="pill" href="#v-pills-legend" role="tab">Legend</a>
-                                        <a class="nav-link" id="v-pills-appearance-tab" data-toggle="pill" href="#v-pills-appearance" role="tab">Appearance</a>
-                                        <a class="nav-link" id="v-pills-data-labels-tab" data-toggle="pill" href="#v-pills-data-labels" role="tab">Data Labels</a>
-                                        <a class="nav-link" id="v-pills-credits-tab" data-toggle="pill" href="#v-pills-credits" role="tab">Credits</a>
-                                    </div>
-                                </div>
-                                <div class="col-8">
-                                    <div class="tab-content" id="v-pills-tabContent">
-                                        <div class="tab-pane fade show active" id="v-pills-titles" role="tabpanel">
-                                            <div class="form-group">
-                                                <label for="chart-title">Chart Title</label>
-                                                <input type="text" class="form-control" id="chart-title">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="chart-subtitle">Chart Subtitle</label>
-                                                <input type="text" class="form-control" id="chart-subtitle">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="axis-title">Axis Title</label>
-                                                <input type="text" class="form-control" id="axis-title">
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="v-pills-legend" role="tabpanel">
-                                            <div class="form-group form-check">
-                                                <input type="checkbox" class="form-check-input" id="show-legend">
-                                                <label class="form-check-label" for="show-legend">Show Legend</label>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="v-pills-appearance" role="tabpanel">
-                                            <div class="form-group">
-                                                <label for="series-color">Series Color</label>
-                                                <select id="series-color" class="selectpicker form-control">
-                                                    <option style="background: #7cb5ec; color: #fff;" value="#7cb5ec" selected>Blue</option>
-                                                    <option style="background: #434348; color: #fff;" value="#434348">Black</option>
-                                                    <option style="background: #90ed7d; color: #fff;" value="#90ed7d">Light Green</option>
-                                                    <option style="background: #f7a35c; color: #fff;" value="#f7a35c">Orange</option>
-                                                    <option style="background: #8085e9; color: #fff;" value="#8085e9">Purple</option>
-                                                    <option style="background: #f15c80; color: #fff;" value="#f15c80">Pink</option>
-                                                    <option style="background: #e4d354; color: #fff;" value="#e4d354">Yellow</option>
-                                                    <option style="background: #2b908f; color: #fff;" value="#2b908f">Green</option>
-                                                    <option style="background: #f45b5b; color: #fff;" value="#f45b5b">Red</option>
-                                                    <option style="background: #91e8e1; color: #fff;" value="#91e8e1">Light Blue</option>
-                                                    <option style="background: #000022; color: #fff;" value="#000022">Dark Blue</option>
-                                                  </select>
-                                            </div>
-                                            <div class="form-group form-check">
-                                                <input type="checkbox" class="form-check-input" id="show-map-navigation" checked="checked">
-                                                <label class="form-check-label" for="show-map-navigation">Show Map Navigation</label>
-                                            </div>
-                                            <div class="form-group form-check">
-                                                <input type="checkbox" class="form-check-input" id="show-chart-border" checked="checked">
-                                                <label class="form-check-label" for="show-chart-border">Show Chart Border</label>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="v-pills-data-labels" role="tabpanel">
-                                            <p class="font-weight-bold">General</p>
-                                            <div class="form-group form-check">
-                                                <input type="checkbox" class="form-check-input" id="show-data-labels" checked="checked">
-                                                <label class="form-check-label" for="show-data-labels">Show Data Labels</label>
-                                            </div>
-                                            <p class="font-weight-bold">For World Map</p>
-                                            <div class="form-group form-check">
-                                                <input type="checkbox" class="form-check-input" id="show-logarithmic-scale">
-                                                <label class="form-check-label" for="show-logarithmic-scale">Show Logarithmic Scale</label>
-                                            </div>
-                                            <div class="form-group form-check">
-                                                <input type="checkbox" class="form-check-input" id="show-color-axis" checked="checked">
-                                                <label class="form-check-label" for="show-color-axis">Show Color Axis</label>
-                                            </div>
-                                            <p class="font-weight-bold">For Bubble Map</p>
-                                            <div class="row mb-3">
-                                                <div class="col">
-                                                    <label for="min-size">Min Size</label>
-                                                    <input type="number" class="form-control" id="min-size" min="0" step="1"value="10">
-                                                </div>
-                                                <div class="col">
-                                                    <label for="max-size">Max Size</label>
-                                                    <input type="number" class="form-control" id="max-size" min="0" step="1" value="50">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="v-pills-credits" role="tabpanel">
-                                            <div class="form-group form-check">
-                                                <input type="checkbox" class="form-check-input" id="show-watermark">
-                                                <label class="form-check-label" for="show-watermark">Show Watermark</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="tab-pane fade" id="bubble-map" role="tabpanel">
+                            <div id="container-map-bubble" class="map-container mt-3"></div>
                         </div>
-                    </div>
-                    <button id="btn-plot" class="btn btn-success" type="button">Plot</button>
-                </form>
-            </div>
-            <div class="col-9">
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link active" id="map-general-tab" data-toggle="tab" href="#world-map" role="tab">World Map</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="map-bubble-tab" data-toggle="tab" href="#bubble-map" role="tab">Bubble Map</a>
-                    </li>
-                </ul>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="world-map" role="tabpanel">
-                        <div id="container-map-world" class="map-container mt-3"></div>
-                    </div>
-                    <div class="tab-pane fade" id="bubble-map" role="tabpanel">
-                        <div id="container-map-bubble" class="map-container mt-3"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
     <!-- Vendor -->
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
