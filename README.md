@@ -11,6 +11,7 @@ Generating schematic and interactive maps from your data
 
 ## Screenshot
 
+<img src="https://thiagodnf.github.io/plot-data-on-a-world-map/images/screenshot.png"/>
 
 ## Questions or Suggestions
 
