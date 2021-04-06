@@ -1,4 +1,4 @@
-<img src="https://thiagodnf.github.io/plot-data-on-a-world-map/images/favicons/favicon-32x32.png.png"/>
+<img src="https://thiagodnf.github.io/plot-data-on-a-world-map/images/favicons/favicon-32x32.png"/>
 
 # Plot Data on a World Map
 
