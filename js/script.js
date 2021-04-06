@@ -113,6 +113,11 @@ function loadExample(countries){
 
 $(function(){
 
+    const documentHeight = $(document).height();
+    const position = $(".map-container").offset();
+
+    $(".map-container").height(documentHeight - position.top-20) ;
+
     readCountries().then((countries) => {
 
         loadExample(countries);
