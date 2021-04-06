@@ -59,6 +59,8 @@ function parse(data){
 
 function loadCodes(countries, data){
 
+    let errors = [];
+
     data.forEach((el, i) => {
 
         let key = el.name.toLowerCase();
@@ -68,9 +70,20 @@ function loadCodes(countries, data){
             el.code = country.isoCodes[0];
             el.code3 = country.isoCodes[1];
         } else {
-            console.log("Not Found", el)
+            errors.push(el);
         }
     });
+
+    if (errors.length != 0){
+
+        $("#errors").empty();
+
+        errors.forEach(el => {
+            $("#errors").append(`<li>'${el.name}' was not found</li>`)
+        })
+
+        $("#modal-errors").modal("show");
+    }
 
     return data;
 }
