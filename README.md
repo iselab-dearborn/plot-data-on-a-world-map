@@ -15,7 +15,11 @@ Access the tool <a href="https://iselab-dearborn.github.io/plot-data-on-a-world-
 
 ## Screenshot
 
-<img src="https://thiagodnf.github.io/plot-data-on-a-world-map/images/screenshot.png"/>
+<div >
+    <kbd>
+        <img src="https://thiagodnf.github.io/plot-data-on-a-world-map/images/screenshot.png"/>
+    </kbd>
+</div>
 
 ## Questions or Suggestions
 
