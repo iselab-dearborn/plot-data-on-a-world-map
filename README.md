@@ -2,10 +2,10 @@
 
 Generating schematic and interactive maps from your data
 
-[![GitHub Release](https://img.shields.io/github/release/thiagodnf/wumpus-world-simulator.svg)](https://github.com/thiagodnf/wumpus-world-simulator/releases/latest)
-[![GitHub contributors](https://img.shields.io/github/contributors/thiagodnf/wumpus-world-simulator.svg)](https://github.com/thiagodnf/wumpus-world-simulator/graphs/contributors)
-[![GitHub stars](https://img.shields.io/github/stars/thiagodnf/wumpus-world-simulator.svg)](https://github.com/thiagodnf/wumpus-world-simulator)
-![GitHub top language](https://img.shields.io/github/languages/top/thiagodnf/wumpus-world-simulator)
+[![GitHub Release](https://img.shields.io/github/release/iselab-dearborn/plot-data-on-a-world-map.svg)](https://github.com/iselab-dearborn/plot-data-on-a-world-map/releases/latest)
+[![GitHub contributors](https://img.shields.io/github/contributors/iselab-dearborn/plot-data-on-a-world-map.svg)](https://github.com/iselab-dearborn/plot-data-on-a-world-map/graphs/contributors)
+[![GitHub stars](https://img.shields.io/github/stars/iselab-dearborn/plot-data-on-a-world-map.svg)](https://github.com/iselab-dearborn/plot-data-on-a-world-map)
+![GitHub top language](https://img.shields.io/github/languages/top/iselab-dearborn/plot-data-on-a-world-map)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
@@ -23,7 +23,7 @@ Access the tool <a href="https://iselab-dearborn.github.io/plot-data-on-a-world-
 
 ## Questions or Suggestions
 
-Feel free to create <a href="https://github.com/iselab-dearborn/gitcloner/issues">issues</a> here as you need
+Feel free to create <a href="https://github.com/iselab-dearborn/plot-data-on-a-world-map/issues">issues</a> here as you need
 
 ## Contribute
 
@@ -33,7 +33,7 @@ Contributions to the this project are very welcome! We can't do this alone! Feel
 
 * **Thiago Ferreira** - *Initial work*
 
-See also the list of [contributors](https://github.com/iselab-dearborn/gitcloner/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/iselab-dearborn/plot-data-on-a-world-map/graphs/contributors) who participated in this project.
 
 ## License
 
