@@ -23,7 +23,7 @@ Access the tool <a href="https://iselab-dearborn.github.io/plot-data-on-a-world-
 
 ## Questions or Suggestions
 
-Feel free to create <a href="https://github.com/thiagodnf/wumpus-world-simulator/issues">issues</a> here as you need
+Feel free to create <a href="https://github.com/iselab-dearborn/gitcloner/issues">issues</a> here as you need
 
 ## Contribute
 
@@ -33,21 +33,14 @@ Contributions to the this project are very welcome! We can't do this alone! Feel
 
 * **Thiago Ferreira** - *Initial work*
 
-See also the list of [contributors](https://github.com/thiagodnf/wumpus-world-simulator/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/iselab-dearborn/gitcloner/graphs/contributors) who participated in this project.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-## Donate
+## Powered by
 
-I open-source almost everything I can, and I try to reply to everyone needing help using these projects. Obviously, this takes time. You can integrate and use these projects in your applications for free! You can even change the source code and redistribute (even resell it).
-
-However, if you get some profit from this or just want to encourage me to continue creating stuff, there are few ways you can do it:
-
-<a href="https://www.buymeacoffee.com/thiagodnf" target="_blank">
-  <img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg" alt="Buy Me A Coffee">
-</a>
-<br/>
-<br/>
-Thanks! ❤️
+<p float="left">
+    <img src="https://user-images.githubusercontent.com/114015/77862143-99351b80-71e7-11ea-84b2-62038634f314.png" height="58px"/>
+</p>
