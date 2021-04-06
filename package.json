@@ -1,7 +1,7 @@
 {
-	"name": "plot-world-map",
-	"version": "1.0.0",
-	"description": "A Wumpus World Simulator developed in Javascript, HTML and CSS",
+	"name": "plot-data-on-a-world-map",
+	"version": "0.0.1",
+	"description": "Generating schematic and interactive maps from your data",
 	"main": "app.js",
 	"scripts": {
 		"start": "node app.js",
@@ -9,14 +9,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/thiagodnf/wumpus-world-simulator"
+		"url": "https://github.com/iselab-dearborn/plot-data-on-a-world-map"
 	},
 	"author": "Thiago Ferreira",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/thiagodnf/wumpus-world-simulator/issues"
+		"url": "https://github.com/iselab-dearborn/plot-data-on-a-world-map/issues"
 	},
-	"homepage": "http://thiagodnf.github.io/wumpus-world-simulator",
+	"homepage": "http://iselab-dearborn.github.io/plot-data-on-a-world-map",
 	"devDependencies": {
 		"nodemon": "^2.0.7"
 	},
