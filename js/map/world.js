@@ -49,13 +49,13 @@ function plotWorld(data, settings){
                 Highcharts.defaultOptions.legend.backgroundColor
             ) || 'rgba(255, 255, 255, 0.85)'
         },
-        colorAxis: {
+        colorAxis: settings.showColorAxis ? {
             min: minColorAxis,
             max: maxColorAxis,
             type: settings.showLogarithmicScale ? 'logarithmic' : null,
             minColor: '#EEEEFF',
             maxColor: '#000022',
-        },
+        } : null,
         series: [{
             name: settings.axisTitle || "Data",
             joinBy: ['iso-a3', 'code3'],

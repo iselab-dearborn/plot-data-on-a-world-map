@@ -90,7 +90,8 @@ function plot(countries){
         showWatermark: $('#show-watermark').prop('checked'),
         showBorder: $('#show-border').prop('checked'),
         showDataLabels: $('#show-data-labels').prop('checked'),
-        showLogarithmicScale: $('#show-logarithmic-scale').prop('checked')
+        showLogarithmicScale: $('#show-logarithmic-scale').prop('checked'),
+        showColorAxis: $('#show-color-axis').prop('checked')
     }
 
     data = parse(data);
