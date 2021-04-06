@@ -1,4 +1,4 @@
-<img src="https://thiagodnf.github.io/plot-data-on-a-world-map/images/favicons/apple-touch-icon.png" width="60px"/>
+<img src="https://iselab-dearborn.github.io/plot-data-on-a-world-map/images/favicons/apple-touch-icon.png" width="60px"/>
 
 # Plot Data on a World Map
 
@@ -19,7 +19,7 @@ Access the tool <a href="https://iselab-dearborn.github.io/plot-data-on-a-world-
 
 <div >
     <kbd>
-        <img src="https://thiagodnf.github.io/plot-data-on-a-world-map/images/screenshot.png"/>
+        <img src="https://iselab-dearborn.github.io/plot-data-on-a-world-map/images/screenshot.png"/>
     </kbd>
 </div>
 
